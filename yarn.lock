@@ -1537,6 +1537,13 @@
     resolve-pathname "^3.0.0"
     tslib "^2.2.0"
 
+"@finetwork/coverage@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@finetwork/coverage/-/coverage-0.1.0.tgz#1388ad53439420a07cb04de56cf03395436deeb0"
+  integrity sha512-zPKHuSt9Kt4x787ywnJ5lpPk1/GXUvsZEt2ODblGJW2Jpx00KNG47/wBRgsqVgtOrMQQRnf+f0UYWJOu4ltE2w==
+  dependencies:
+    uuid "^8.3.2"
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
