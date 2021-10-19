@@ -13,12 +13,12 @@ useEffect(() => {
   const onCoverageChange = (data) => {
     console.log(data)
   }
-  Coverage.events.on('installationAddressChange', onCheckoutChange)
-  Coverage.events.on('addressHistoryChange', onCheckoutChange)
+  Coverage.events.on('installationAddressChange', onCoverageChange)
+  Coverage.events.on('addressHistoryChange', onCoverageChange)
   return () => {
     // unsubscribe
-    Coverage.events.off('installationAddressChange', onCheckoutChange)
-    Coverage.events.off('addressHistoryChange', onCheckoutChange)
+    Coverage.events.off('installationAddressChange', onCoverageChange)
+    Coverage.events.off('addressHistoryChange', onCoverageChange)
   }
 }, [])
 ```

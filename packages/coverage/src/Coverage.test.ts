@@ -1,7 +1,7 @@
 import { Coverage } from './Coverage'
 import { testInstallationAddress } from './utils'
 
-describe('Checkout class', () => {
+describe('Coverage class', () => {
   let coverage: Coverage
   beforeEach(() => {
     coverage = new Coverage({

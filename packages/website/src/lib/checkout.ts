@@ -1,7 +1,10 @@
-import { ServiceCheckout } from '@finetwork/checkout'
+import { Coverage } from '@finetwork/coverage'
 
-export const checkout = new ServiceCheckout({
+export const coverage = new Coverage({
   storage: typeof window !== 'undefined' ? localStorage : null,
-  urlClient: process.env.URL_CLIENT,
-  urlOrder: process.env.URL_ORDER,
+  urls: {
+    normalizer: process.env.URL_NORMALIZER,
+    locator: process.env.URL_LOCATOR,
+    visibility: process.env.URL_VISIBILITY,
+  },
 })
