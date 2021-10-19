@@ -34,10 +34,7 @@ export default function Home(): JSX.Element {
   // } = useCoverage()
   useEffect(() => {}, [])
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout title={siteConfig.title} description="Coverage SDK">
       <HomepageHeader />
       <main>{/* <HomepageFeatures />   */}</main>
     </Layout>
