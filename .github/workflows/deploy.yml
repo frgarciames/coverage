@@ -1,0 +1,23 @@
+name: Node.js Package
+on:
+  workflow_dispatch:
+    inputs:
+      typeLibrary:
+        description: 'Which library do you want to deploy ?  (vanilla/react)'
+        required: true
+        default: 'vanilla'
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn
+      - run: yarn build-${{ github.event.inputs.typeLibrary }}-library
+      - run: yarn publish-${{ github.event.inputs.typeLibrary }}-library $NODE_AUTH_TOKEN
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
